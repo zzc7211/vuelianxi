@@ -8,18 +8,17 @@
     </head>
     <body>
         <div id="vue-app">
-            <h1>函数调用</h1>
-            <button v-on:click="a++">add to A</button>
-            <button v-on:click="b++">Add to B</button>
-            <p>A - {{a}}</p>
-            <p>B - {{b}}</p>
-            <p>Age + A ={{addtoA()}}</p>
-            <p>Age + A ={{addtoB()}}</p>
-            <h1>computed 属性计算</h1>
-            <p>A - {{a}}</p>
-            <p>B - {{b}}</p>
-            <p>Age + A ={{c_addtoA}}</p>
-            <p>Age + A ={{c_addtoB}}</p>
+          <h1>动态CSS CLASS</h1>
+            <h2>动态CSS样式</h2>
+            <div V-bind:class="{changeColor:changeColor}" v-on:click="changeColor=!changeColor">
+                <span>测试内容</span>
+            </div>
+            <h2>示例2</h2>
+            <button v-on:click="changeColor=!changeColor">changeColor</button>
+            <button v-on:click="changeLength=!changeLength">changelength</button>
+            <div v-bind:class="compClasses">
+                <span>测试内容2</span>
+            </div>
         </div>
     </body>
 
