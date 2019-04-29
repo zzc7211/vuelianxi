@@ -3,19 +3,27 @@ new Vue({
     data: {
         name:"测试元",
         age: 25,
-        x: 0,
-        y: 0
+        a:0,
+        b:0,
     },
     methods: {
-        add: function(inc){
-            this.age += inc;
+        addtoA:function () {
+            console.log("Add to A");
+            return this.a+this.age;
         },
-        subtract: function(dec){
-            this.age -= dec;
+        addtoB:function () {
+            console.log("Add to B");
+            return this.b+this.age;
+        }
+    },
+    computed:{
+        c_addtoA:function () {
+            console.log("computed 属性计算Add to A");
+            return this.a+this.age;
         },
-        updateXY: function(event){
-            this.x = event.offsetX;
-            this.y = event.offsetY;
+        c_addtoB:function () {
+            console.log("computed 属性计算Add to B");
+            return this.b+this.age;
         }
     }
 });
